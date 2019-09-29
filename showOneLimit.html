@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/StaffInfor.css" />
+		<link rel="stylesheet" href="css/limit.css" />
+	</head>
+
+	<body>
+		<div id="ho">
+			<div class="header">
+				<img class="logo" src="img/ia_100000000.png" />
+				<div class="navlist">
+					<a href="#">我的桌面，Ian</a>
+				</div>
+				<div class="rightnav">
+					<i class="icon1"></i>
+					<i class="icon2"></i>
+					<i class="icon3 btn"></i>
+				</div>
+			</div>
+			<div class="box1">
+				<span>你好，admin</span>
+			</div>
+			<ul class="leftnav">
+				<li>
+					<i></i>
+					<a href="#">管理中心</a>
+				</li>
+				<li>
+					<i></i>
+					<a href="#">管理中心</a>
+				</li>
+				<li>
+					<i></i>
+					<a href="#">管理中心</a>
+				</li>
+				<li>
+					<i></i>
+					<a href="#">管理中心</a>
+				</li>
+				<li>
+					<i></i>
+					<a href="#">管理中心</a>
+				</li>
+				<li>
+					<i></i>
+					<a href="#">管理中心</a>
+				</li>
+				<li>
+					<i></i>
+					<a href="#">管理中心</a>
+				</li>
+			</ul>
+			<div class="notice1">
+				<p class="p1">最新公告：</p>
+				<div class="notice2">
+					<p>旅游经营服务七类行为 或将列入“严重失信”</p>
+					<p>中国成为纽约市第二大境外旅游客源国</p>
+					<p>旅游经营服务七类行为 或将列入“严重失信”</p>
+				</div>
+			</div>
+			<div class="dh">
+				<a href="AllLimit.html">总权限管理</a>
+				<a href="departmentLimitMan.html">部门权限管理</a>
+				<a href="LimitDivision.html">用户权限分配</a>
+				<a href="PersonLimitInfor.html">个人权限信息</a>
+			</div>
+			<div class="box3">
+				<a href="AllUserLimit.html">所有用户权限</a>
+				<span onclick="sho()">详细查询</span>
+
+			</div>
+			<div class="tb">
+			<table border="1" cellpadding="0" cellspacing="0">
+				<tr>
+					<th>账号</th>
+					<th>姓名</th>
+					<th>部门</th>
+					<th>职务</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>张三</td>
+					<td>技术部</td>
+					<td>经理</td>
+					<td>
+						<a href="updatePersonLimit.html">修改</a>|
+						<a href="#"  onclick="return confirm('确定要删除')">删除</a>
+					</td>
+				</tr>			
+			</table>
+			
+			</div>
+		</div>
+		
+		
+		<div id="searchDe" class="sd">
+			<span class="clo" onclick="gb()">关闭</span>
+
+			<form>
+
+				<div class="sele">
+					部门:
+					<select>
+						<option>---请选择---</option>
+					</select><br /> 职位:
+					<select>
+						<option>---请选择---</option>
+					</select><br /> 员工编号:
+					<select>
+						<option>---请选择---</option>
+					</select><br />
+					<input type="submit" value="确定" class="stj" />
+				</div>
+			</form>
+
+		</div>
+
+		<div class="right"></div>
+	</body>
+	<script type="text/javascript">
+		function sho() {
+			var searchDe = document.getElementById("searchDe");
+			var ho = document.getElementById("ho");
+			ho.className = "hid";
+			searchDe.className = "s";
+
+		}
+
+		function gb() {
+			var searchDe = document.getElementById("searchDe");
+			var ho = document.getElementById("ho");
+			searchDe.className = "sd"
+			ho.className = "yb";
+		}
+
+		var btn = document.getElementsByClassName("btn")[0];
+		var right = document.getElementsByClassName("right")[0];
+		var i = 0;
+		btn.onclick = function() {
+			i++;
+			if(i % 2 != 0) {
+				right.style.right = "0px";
+			} else {
+				right.style.right = "-200px";
+			}
+
+		}
+	</script>
+
+</html>
